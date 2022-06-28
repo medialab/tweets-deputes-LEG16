@@ -1,0 +1,38 @@
+{
+    "twitter": {
+        "user": "##USER##",
+        "key": "##KEY##",
+        "secret": "##SECRET##",
+        "oauth_token": "##OAUTHTOKEN##",
+        "oauth_secret": "##OAUTHSECRET##"
+    },
+    "database": {
+        "host": "localhost",
+        "port": 9200,
+        "db_name": "gazouilloire-deputes",
+        "multi_index": true,
+	    "nb_past_months": 4
+    },
+    "description": "Men MPs",
+    "keywords": [
+
+        ##MEN_ACCOUNTS##
+
+    ],
+    "url_pieces": [],
+    "time_limited_keywords": {},
+    "language": null,
+    "geolocation": "",
+    "resolve_redirected_links": true,
+    "resolving_delay": 30,
+    "grab_conversations": true,
+    "catchup_past_week": true,
+    "download_media": {
+        "photos": false,
+        "videos": false,
+        "animated_gifs": false,
+        "media_directory": "media"
+    },
+    "timezone": "Europe/Paris",
+    "verbose": true
+}

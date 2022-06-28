@@ -1,0 +1,73 @@
+{
+    "twitter": {
+        "user": "##USER##",
+        "key": "##KEY##",
+        "secret": "##SECRET##",
+        "oauth_token": "##OAUTHTOKEN##",
+        "oauth_secret": "##OAUTHSECRET##"
+    },
+    "database": {
+        "host": "localhost",
+        "port": 9200,
+        "db_name": "gazouilloire-deputes",
+        "multi_index": true,
+        "nb_past_months": 4
+    },
+    "description": "Institutional accounts, political groups accounts, hashtags and Women MPs",
+    "keywords": [
+        "@AssembleeNat",
+        "@AN_Finances",
+        "@AN_Defense",
+        "@AN_ComLois",
+        "@AN_DevDur",
+        "@AN_AfEco",
+        "@AN_AfEur",
+        "@AN_AfEtr",
+        "@AN_AfCult",
+        "@AN_AfSoc",
+
+        "@LCP",
+
+        "@FIAssemblee",
+        "@deputesPCF",
+        "@socialistesAN",
+        "@ecolo_an",
+        "@DeputesDem",
+        "@LaREM_AN",
+        "@AgirEnsemble_AN",
+        "@Horizons_AN",
+        "@GroupeLibTerrAN",
+        "@DeputesUDI_Ind",
+        "@Republicains_An",
+
+        "DirectAN",
+        "QAG",
+        "AssembleeNationale",
+
+        ##WOMEN_ACCOUNTS##
+    ],
+    "to be completed / updated": [
+        "groupe UTILE / LIOT",
+        "groupe EELV à vérifier (ecolo_AN vieux)",
+        "groupe RN",
+        "OlivierVeran when suppléant in place or remplaçant if remaniement"
+    ],
+    "url_pieces": [
+        "assemblee-nationale.fr"
+    ],
+    "time_limited_keywords": {},
+    "language": null,
+    "geolocation": "",
+    "resolve_redirected_links": false,
+    "resolving_delay": 30,
+    "grab_conversations": true,
+    "catchup_past_week": true,
+    "download_media": {
+        "photos": false,
+        "videos": false,
+        "animated_gifs": false,
+        "media_directory": "media"
+    },
+    "timezone": "Europe/Paris",
+    "verbose": true
+}

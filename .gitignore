@@ -1,0 +1,10 @@
+/*.csv
+.minetrc.json
+config.inc
+part-*/.lock
+part-*/.stoplock
+part-*/.search_state.json
+part-*/config.json
+part-*/logs
+part-*/piles
+twitter-parlementaires
