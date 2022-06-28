@@ -49,3 +49,11 @@ sed "s/##USER##/$USER2/" config-passwordless.json   |
  sed "s/##OAUTHSECRET##/$OAUTHSECRET2/" > config.json
 gazou restart -t 3000
 
+# Version configs
+cd ..
+if git diff part*/config-passwordless.json | grep . > /dev/null; then
+  git add part*/config-passwordless.json
+  git commit -m "autoupdate gazouilloire config with latest MPs accounts"
+  git push
+fi
+
