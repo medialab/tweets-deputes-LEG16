@@ -1,4 +1,4 @@
-/*.csv
+*.csv.gz
 .minetrc.json
 config.inc
 part-*/.lock
