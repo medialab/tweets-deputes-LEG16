@@ -36,8 +36,8 @@
         "@LaREM_AN",
         "@AgirEnsemble_AN",
         "@Horizons_AN",
-        "@GroupeLibTerrAN",
-        "@DeputesUDI_Ind",
+        "@GroupeLIOT_An",
+        "@GroupeUDI_Agir",
         "@Republicains_An",
 
         "DirectAN",
@@ -47,10 +47,9 @@
         ##WOMEN_ACCOUNTS##
     ],
     "to be completed / updated": [
-        "groupe UTILE / LIOT",
-        "groupe EELV à vérifier (ecolo_AN vieux)",
+        "groupe EELV à vérifier (ecolo_AN & Ecologistes_AN vieux)",
         "groupe RN",
-        "OlivierVeran when suppléant in place or remplaçant if remaniement"
+        "FranckRiester when suppléant in place"
     ],
     "url_pieces": [
         "assemblee-nationale.fr"
