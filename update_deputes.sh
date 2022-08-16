@@ -18,20 +18,24 @@ cd twitter-parlementaires
 git pull
 MEN_ACCOUNTS=$(grep ',"H",' data/deputes.csv |
  sed 's/,.*$/,/'            |
- sed 's/^"/"@/'             |
- tr "\n" " "                |
- sed 's/, $//'
+ sed 's/^"/        "@/'     |
+ tac                        |
+ sed '0,/,/s/,.*$//'        |
+ tac
 )
 WOMEN_ACCOUNTS=$(grep ',"F",' data/deputes.csv |
  sed 's/,.*$/,/'            |
- sed 's/^"/"@/'             |
- tr "\n" " "                |
- sed 's/, $//'
+ sed 's/^"/        "@/'     |
+ tac                        |
+ sed '0,/,/s/,.*$//'        |
+ tac
 )
 
 # Update First collect's config with men's accounts and restart it
 cd ../part-1
-sed "s/##MEN_ACCOUNTS##/$MEN_ACCOUNTS/" config.json.template > config-passwordless.json
+grep -B 1000 '##MEN_ACCOUNTS##' config.json.template | grep -v '##MEN_ACCOUNTS##' > config-passwordless.json
+echo "$MEN_ACCOUNTS" >> config-passwordless.json
+grep -A 1000 '##MEN_ACCOUNTS##' config.json.template | grep -v '##MEN_ACCOUNTS##' >> config-passwordless.json
 sed "s/##USER##/$USER1/" config-passwordless.json   |
  sed "s/##KEY##/$KEY1/"                             |
  sed "s/##SECRET##/$SECRET1/"                       |
@@ -41,7 +45,9 @@ gazou restart -t 3000
 
 # Update Second collect's config with women's accounts and restart it
 cd ../part-2
-sed "s/##WOMEN_ACCOUNTS##/$WOMEN_ACCOUNTS/" config.json.template > config-passwordless.json
+grep -B 1000 '##WOMEN_ACCOUNTS##' config.json.template | grep -v '##WOMEN_ACCOUNTS##' > config-passwordless.json
+echo "$WOMEN_ACCOUNTS" >> config-passwordless.json
+grep -A 1000 '##WOMEN_ACCOUNTS##' config.json.template | grep -v '##WOMEN_ACCOUNTS##' >> config-passwordless.json
 sed "s/##USER##/$USER2/" config-passwordless.json   |
  sed "s/##KEY##/$KEY2/"                             |
  sed "s/##SECRET##/$SECRET2/"                       |
